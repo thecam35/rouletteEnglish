@@ -24,7 +24,6 @@
     h1 {
         margin-top: 20px;
         color: #00f7ff;
-        text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
         font-weight: 700;
     }
     canvas {
@@ -45,25 +44,21 @@
         color: #000;
         font-weight: bold;
         transition: all 0.3s ease;
-        box-shadow: 0 0 15px rgba(0, 247, 255, 0.3);
     }
     button:hover {
         background: linear-gradient(45deg, #00ffea, #00b4ff);
         transform: translateY(-2px);
-        box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
     }
     #resultado {
         font-size: 24px;
         margin-top: 20px;
         font-weight: bold;
         color: #00f7ff;
-        text-shadow: 0 0 5px rgba(0, 247, 255, 0.5);
     }
     #total {
         font-size: 22px;
         margin-top: 10px;
         color: #00ff9d;
-        text-shadow: 0 0 5px rgba(0, 255, 157, 0.3);
     }
     .auth-container {
         max-width: 400px;
@@ -126,7 +121,6 @@
         font-size: 24px;
         cursor: pointer;
         z-index: 1000;
-        box-shadow: 0 0 20px rgba(0, 247, 255, 0.4);
         transition: all 0.3s ease;
     }
     .rules-btn:hover {
@@ -151,7 +145,6 @@
         max-width: 600px;
         border-radius: 15px;
         text-align: left;
-        box-shadow: 0 0 30px rgba(0, 247, 255, 0.3);
     }
     .close {
         color: #00f7ff;
@@ -159,7 +152,6 @@
         font-size: 28px;
         font-weight: bold;
         cursor: pointer;
-        text-shadow: 0 0 5px rgba(0, 247, 255, 0.5);
     }
     .close:hover {
         color: #fff;
@@ -169,7 +161,6 @@
         text-align: center;
         margin-bottom: 20px;
         font-size: 24px;
-        text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
     }
     .rules-list {
         padding-left: 20px;
@@ -181,7 +172,6 @@
     .highlight {
         color: #00ff9d;
         font-weight: bold;
-        text-shadow: 0 0 5px rgba(0, 255, 157, 0.3);
     }
     /* Panel lateral de retiros y recargas */
     .side-panel {
@@ -192,7 +182,6 @@
         border-right: 1px solid #00f7ff;
         display: flex;
         flex-direction: column;
-        box-shadow: 5px 0 20px rgba(0, 0, 0, 0.3);
     }
     .panel-tabs {
         display: flex;
@@ -223,7 +212,6 @@
         font-size: 20px;
         margin-bottom: 20px;
         text-align: center;
-        text-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
     }
     .item {
         background: rgba(0, 247, 255, 0.1);
@@ -236,7 +224,6 @@
     }
     .item:hover {
         transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0, 247, 255, 0.2);
     }
     .item-name {
         font-weight: bold;
@@ -291,7 +278,6 @@
         font-size: 24px;
         cursor: pointer;
         z-index: 1000;
-        box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
         transition: all 0.3s ease;
     }
     .admin-btn:hover {
@@ -314,7 +300,6 @@
         text-align: center;
         font-size: 28px;
         margin-bottom: 30px;
-        text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
     }
     .admin-tabs {
         display: flex;
@@ -393,7 +378,6 @@
         border-radius: 15px;
         text-align: left;
         border: 1px solid #00f7ff;
-        box-shadow: 0 0 30px rgba(0, 247, 255, 0.3);
     }
     .withdraw-form input {
         width: 100%;
@@ -412,21 +396,61 @@
         margin-top: 30px;
         font-size: 16px;
     }
-    /* Efectos de neón */
-    .neon-text {
-        text-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff, 0 0 15px #00f7ff;
+    /* Modal de recarga */
+    .recharge-modal {
+        display: none;
+        position: fixed;
+        z-index: 1003;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
     }
-    .neon-border {
-        box-shadow: 0 0 10px #00f7ff, 0 0 20px rgba(0, 247, 255, 0.3);
+    .recharge-content {
+        background: linear-gradient(135deg, #0f0c29, #302b63);
+        margin: 10% auto;
+        padding: 30px;
+        border: 1px solid #00f7ff;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 15px;
+        text-align: center;
     }
-    /* Animaciones */
-    @keyframes pulse {
-        0% { box-shadow: 0 0 10px rgba(0, 247, 255, 0.5); }
-        50% { box-shadow: 0 0 20px rgba(0, 247, 255, 0.8); }
-        100% { box-shadow: 0 0 10px rgba(0, 247, 255, 0.5); }
+    .recharge-title {
+        color: #00f7ff;
+        font-size: 24px;
+        margin-bottom: 20px;
     }
-    .pulse-effect {
-        animation: pulse 2s infinite;
+    .recharge-info {
+        background: rgba(0, 247, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .recharge-info p {
+        margin: 10px 0;
+    }
+    .recharge-amount {
+        font-size: 18px;
+        font-weight: bold;
+        color: #00ff9d;
+    }
+    .recharge-id {
+        font-size: 20px;
+        font-weight: bold;
+        color: #00f7ff;
+        margin: 15px 0;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+    }
+    .recharge-steps {
+        text-align: left;
+        margin: 20px 0;
+    }
+    .recharge-steps li {
+        margin-bottom: 10px;
     }
 </style>
 </head>
@@ -483,6 +507,35 @@
                 <li>🎁 Los premios van desde $0.50 USD hasta $10.00 USD, pero también hay espacios vacíos.</li>
                 <li>📌 Para recargar, envía el pago al ID de Binance: <span class="highlight">1050484055</span>.</li>
             </ul>
+        </div>
+    </div>
+
+    <!-- Modal de recarga -->
+    <div id="rechargeModal" class="recharge-modal">
+        <div class="recharge-content">
+            <span class="close" onclick="closeRechargeModal()">&times;</span>
+            <h2 class="recharge-title">💳 Recargar Saldo</h2>
+            
+            <div class="recharge-info">
+                <p>Para recargar tu saldo, sigue estos pasos:</p>
+                
+                <div class="recharge-steps">
+                    <ol>
+                        <li>Abre tu aplicación de Binance</li>
+                        <li>Selecciona la opción de enviar cripto</li>
+                        <li>Ingresa el siguiente ID de Binance:</li>
+                    </ol>
+                </div>
+                
+                <div class="recharge-id">1050484055</div>
+                
+                <p>Envía el monto que deseas recargar (mínimo $1 USD)</p>
+                <p>Luego completa el siguiente formulario:</p>
+            </div>
+            
+            <input type="number" id="rechargeAmount" placeholder="Monto a recargar (USD)" min="1" step="0.01">
+            <button onclick="submitRechargeRequest()">Enviar Solicitud</button>
+            <button onclick="closeRechargeModal()" style="background: #ff4444;">Cancelar</button>
         </div>
     </div>
 
@@ -580,7 +633,7 @@
         <canvas id="ruleta" width="400" height="400"></canvas>
         <br>
         <button onclick="girar()">🎡 Girar (Costo: $1 USD)</button>
-        <button onclick="recargar()">💳 Recargar Saldo</button>
+        <button onclick="openRechargeModal()">💳 Recargar Saldo</button>
         <button onclick="openWithdrawForm()">💸 Solicitar Retiro</button>
 
         <p id="resultado"></p>
@@ -789,6 +842,55 @@ function openRules() {
 
 function closeRules() {
     document.getElementById('rulesModal').style.display = 'none';
+}
+
+// Funciones para el modal de recarga
+function openRechargeModal() {
+    document.getElementById('rechargeModal').style.display = 'block';
+}
+
+function closeRechargeModal() {
+    document.getElementById('rechargeModal').style.display = 'none';
+}
+
+function submitRechargeRequest() {
+    const monto = parseFloat(document.getElementById('rechargeAmount').value);
+    
+    if (isNaN(monto)) {
+        alert("Por favor ingresa un monto válido.");
+        return;
+    }
+    if (monto < 1) {
+        alert("El monto mínimo de recarga es $1 USD.");
+        return;
+    }
+    
+    const user = auth.currentUser;
+    
+    // Crear solicitud de recarga
+    db.collection('rechargeRequests').add({
+        userId: user.uid,
+        userName: user.displayName || user.email.split('@')[0],
+        userEmail: user.email,
+        amount: monto,
+        status: 'pending',
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    })
+    .then(() => {
+        // Notificación a Telegram
+        const telegramMsg = `🆕 <b>NUEVA SOLICITUD DE RECARGA</b>\n\n` +
+                           `👤 Usuario: ${user.email}\n` +
+                           `💰 Monto: $${monto.toFixed(2)} USD`;
+        
+        sendTelegramNotification(telegramMsg);
+        
+        alert("📩 Solicitud de recarga enviada. Un administrador la revisará pronto.");
+        closeRechargeModal();
+    })
+    .catch(error => {
+        console.error("Error al solicitar recarga:", error);
+        alert("Error al enviar la solicitud de recarga: " + error.message);
+    });
 }
 
 // Funciones para el panel de administración
@@ -1204,7 +1306,7 @@ function login() {
     
     auth.signInWithEmailAndPassword(email, password)
         .then(() => {
-            alert("Inicio de sesión exitoso");
+            // Inicio de sesión exitoso
         })
         .catch((error) => {
             alert("Error al iniciar sesión: " + error.message);
@@ -1243,7 +1345,6 @@ function signup() {
             
             sendTelegramNotification(telegramMsg);
             
-            alert("Registro exitoso. Se te ha asignado un saldo inicial de $0 USD");
             toggleRegister();
         })
         .catch((error) => {
@@ -1255,7 +1356,7 @@ function signup() {
 function logout() {
     auth.signOut()
         .then(() => {
-            alert("Sesión cerrada correctamente");
+            // Sesión cerrada correctamente
         })
         .catch((error) => {
             alert("Error al cerrar sesión: " + error.message);
@@ -1381,46 +1482,6 @@ function actualizarTotal() {
         `💵 Total ganado: $${totalGanado.toFixed(2)} USD`;
 }
 
-// Función para recargar saldo
-function recargar() {
-    alert("📌 Envia el pago a tu ID de Binance: 1050484055");
-    let monto = parseFloat(prompt("💳 Ingresa el monto a recargar (mínimo $1 USD):"));
-    if (isNaN(monto)) {
-        alert("❌ Por favor ingresa un monto válido.");
-        return;
-    }
-    if (monto < 1) {
-        alert("❌ El monto mínimo de recarga es $1 USD.");
-        return;
-    }
-    
-    const user = auth.currentUser;
-    
-    // Crear solicitud de recarga
-    db.collection('rechargeRequests').add({
-        userId: user.uid,
-        userName: user.displayName || user.email.split('@')[0],
-        userEmail: user.email,
-        amount: monto,
-        status: 'pending',
-        timestamp: firebase.firestore.FieldValue.serverTimestamp()
-    })
-    .then(() => {
-        // Notificación a Telegram
-        const telegramMsg = `🆕 <b>NUEVA SOLICITUD DE RECARGA</b>\n\n` +
-                           `👤 Usuario: ${user.email}\n` +
-                           `💰 Monto: $${monto.toFixed(2)} USD`;
-        
-        sendTelegramNotification(telegramMsg);
-        
-        alert("📩 Solicitud de recarga enviada. Un administrador la revisará pronto.");
-    })
-    .catch(error => {
-        console.error("Error al solicitar recarga:", error);
-        alert("Error al enviar la solicitud de recarga: " + error.message);
-    });
-}
-
 // Inicializar ruleta y panel lateral
 dibujarRuleta();
 generateRandomWithdrawals();
@@ -1442,6 +1503,11 @@ window.onclick = function(event) {
     const adminPanel = document.getElementById('adminPanel');
     if (event.target == adminPanel) {
         adminPanel.style.display = 'none';
+    }
+    
+    const rechargeModal = document.getElementById('rechargeModal');
+    if (event.target == rechargeModal) {
+        rechargeModal.style.display = 'none';
     }
 }
 </script>
